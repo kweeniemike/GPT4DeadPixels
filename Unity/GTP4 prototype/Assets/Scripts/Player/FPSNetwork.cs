@@ -3,33 +3,70 @@ using System.Collections;
 
 public class FPSNetwork : Photon.MonoBehaviour 
 {
-    private Camera Camera;
+    private GameObject model;
+    private GameObject cameraRig;
     private AudioListener listener;
+    private Light pointLight;
     private FPSController fpsController;
 
     void Awake()
     {
-        this.Camera = GetComponentInChildren<Camera>();
+        this.FindCameraRig();
+        this.FindModel();
+
         this.listener = GetComponentInChildren<AudioListener>();
+        this.pointLight = GetComponentInChildren<Light>();
         this.fpsController = GetComponent<FPSController>();
 
         if (photonView.isMine)
         {
+            Debug.Log("Mine");
+
             //MINE: local player, simply enable the local scripts
-            this.Camera.enabled = true;
+            this.model.SetActive(false);
+            this.cameraRig.SetActive(true);
             this.listener.enabled = true;
+            this.pointLight.intensity = 0.1f;
             this.fpsController.enabled = true;
         }
         else
         {
-            this.Camera.enabled = false;
+            Debug.Log("Others");
+
+            this.cameraRig.SetActive(false);
+            this.model.SetActive(true);
             this.listener.enabled = false;
 
+            this.pointLight.intensity = 0.4f;
             this.fpsController.enabled = true;
             this.fpsController.isControllable = false;
         }
 
         gameObject.name = gameObject.name + photonView.viewID;
+    }
+
+    private void FindCameraRig()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.gameObject.tag == "CameraRig")
+            {
+                this.cameraRig = child.gameObject;
+                break;
+            }
+        }
+    }
+
+    private void FindModel()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.gameObject.tag == "Model")
+            {
+                this.model = child.gameObject;
+                break;
+            }
+        }
     }
 
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
