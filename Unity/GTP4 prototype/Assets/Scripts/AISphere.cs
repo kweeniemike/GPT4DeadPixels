@@ -14,16 +14,20 @@ public class AISphere : MonoBehaviour
 
     private GameObject targetPlayer = null;
     private AIState state;
+    private AISubState subState;
 
     private Transform targetSearchWayPoint = null;
     private Transform targetDeathPoint = null;
+    private Vector3 targetWalkPos = Vector3.zero;
 
     private NavMeshAgent navAgent;
+
 
 	// Use this for initialization
 	void Start () 
     {
         this.state = AIState.Searching;
+        this.subState = AISubState.Walking;
         this.navAgent = this.GetComponent<NavMeshAgent>();
 	}
 	
@@ -58,44 +62,105 @@ public class AISphere : MonoBehaviour
             if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
             {
                 this.state = AIState.WalkingAround;
+                this.subState = AISubState.ChoosingTarget;
+                this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
             }
         }
         else if (this.state == AIState.WalkingAround)
         {
-            // TODO: Randomly walk around for a little while
-
-            Debug.Log("Find death point");
-
-            this.state = AIState.LeadingAway;
-
-            Transform closestDeahPoint = null;
-            foreach(Transform deathPoint in this.DeathPoints)
+            if (this.subState == AISubState.ChoosingTarget)
             {
-                if (closestDeahPoint == null) closestDeahPoint = deathPoint;
-                else if (Vector3.Distance(this.transform.position, deathPoint.position) < 
-                         Vector3.Distance(this.transform.position, closestDeahPoint.position))
+                this.targetWalkPos = GenerateRandomPosAroundPlayer(this.targetPlayer.transform.position);
+                this.navAgent.SetDestination(this.targetWalkPos);
+                this.subState = AISubState.Walking;
+
+                Debug.Log("Find place to walk");
+            }
+            else if (this.subState == AISubState.Walking)
+            {
+                if (Vector3.Distance(this.transform.position, this.targetWalkPos) < this.WayPointDistance)
                 {
-                    closestDeahPoint = deathPoint;
+                    this.subState = AISubState.Waiting;
+                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.ChoosingTarget));
                 }
             }
-
-            this.targetDeathPoint = closestDeahPoint;
-            this.navAgent.SetDestination(closestDeahPoint.position);
         }
         else if (this.state == AIState.LeadingAway)
         {
-            if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) > this.OuterLeadDistance)
+            if (this.subState == AISubState.Walking)
             {
-                this.state = AIState.GoingToPlayer;
-                this.navAgent.SetDestination(this.targetPlayer.transform.position);
-            }
+                if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) > this.OuterLeadDistance)
+                {
+                    this.navAgent.SetDestination(this.transform.position);
+                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.Returning));           
+                }
 
-            if (Vector3.Distance(this.transform.position, this.targetDeathPoint.position) < this.WayPointDistance)
+                if (Vector3.Distance(this.transform.position, this.targetDeathPoint.position) < this.WayPointDistance)
+                {
+                    Debug.Log("End reached.");
+
+                    // TODO: Dissapear
+                }
+            }
+            else if (this.subState == AISubState.Returning)
             {
-                Debug.Log("End reached.");
+                this.navAgent.SetDestination(this.targetPlayer.transform.position);
+
+                if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
+                {
+                    this.FindDeathPoint();
+                }
             }
         }
 	}
+
+    IEnumerator WalkAroundFor(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        this.FindDeathPoint();
+    }
+
+    private void FindDeathPoint()
+    {
+        Debug.Log("Find death point");
+
+        this.state = AIState.LeadingAway;
+        this.subState = AISubState.Walking;
+
+        Transform closestDeahPoint = null;
+        foreach (Transform deathPoint in this.DeathPoints)
+        {
+            if (closestDeahPoint == null) closestDeahPoint = deathPoint;
+            else if (Vector3.Distance(this.transform.position, deathPoint.position) <
+                     Vector3.Distance(this.transform.position, closestDeahPoint.position))
+            {
+                closestDeahPoint = deathPoint;
+            }
+        }
+
+        this.targetDeathPoint = closestDeahPoint;
+        this.navAgent.SetDestination(closestDeahPoint.position);
+    }
+
+    IEnumerator GoToNextSubStateIn(float seconds, AISubState nextState)
+    {
+        yield return new WaitForSeconds(seconds);
+        this.subState = nextState;
+    }
+
+    private Vector3 GenerateRandomPosAroundPlayer(Vector3 playerPos)
+    {
+        Vector3 walkToPos = Vector3.zero;
+        do
+        {
+            Vector2 randomPos = Random.insideUnitCircle * 5.0f;
+            walkToPos = new Vector3(randomPos.x, 0, randomPos.y) + playerPos;
+        }
+        while (!Physics.Raycast(this.transform.position, walkToPos - this.transform.position, Vector3.Distance(this.transform.position, walkToPos)));
+        
+        return walkToPos;
+    }
 
     private void PickRandomSearchWaypoint(Transform curSearchWaypoint)
     {
@@ -112,5 +177,10 @@ public class AISphere : MonoBehaviour
 
 public enum AIState
 {
-    Searching, GoingToPlayer, WalkingAround, LeadingAway
+    Searching, GoingToPlayer, WalkingAround, LeadingAway, 
+}
+
+public enum AISubState
+{
+    Waiting, Walking, ChoosingTarget, Returning
 }
