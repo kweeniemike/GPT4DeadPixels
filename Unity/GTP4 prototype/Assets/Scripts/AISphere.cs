@@ -108,7 +108,9 @@ public class AISphere : MonoBehaviour
 
                 if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
                 {
-                    this.FindDeathPoint();
+                    this.state = AIState.WalkingAround;
+                    this.subState = AISubState.ChoosingTarget;
+                    this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
                 }
             }
         }
