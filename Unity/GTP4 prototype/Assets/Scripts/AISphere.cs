@@ -22,6 +22,7 @@ public class AISphere : MonoBehaviour
 
     private NavMeshAgent navAgent;
 
+    private int leadAwayAttempts = 0;
 
 	// Use this for initialization
 	void Start () 
@@ -81,7 +82,8 @@ public class AISphere : MonoBehaviour
                 if (Vector3.Distance(this.transform.position, this.targetWalkPos) < this.WayPointDistance)
                 {
                     this.subState = AISubState.Waiting;
-                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.ChoosingTarget));
+                    this.navAgent.SetDestination(this.transform.position);
+                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.ChoosingTarget, AIState.WalkingAround));
                 }
             }
         }
@@ -91,15 +93,16 @@ public class AISphere : MonoBehaviour
             {
                 if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) > this.OuterLeadDistance)
                 {
+                    this.leadAwayAttempts++;
                     this.navAgent.SetDestination(this.transform.position);
-                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.Returning));           
+                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.Returning, AIState.LeadingAway));
+
+                    this.subState = AISubState.Waiting;
                 }
 
                 if (Vector3.Distance(this.transform.position, this.targetDeathPoint.position) < this.WayPointDistance)
                 {
-                    Debug.Log("End reached.");
-
-                    // TODO: Dissapear
+                    GameObject.Destroy(this.gameObject);
                 }
             }
             else if (this.subState == AISubState.Returning)
@@ -108,9 +111,16 @@ public class AISphere : MonoBehaviour
 
                 if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
                 {
-                    this.state = AIState.WalkingAround;
-                    this.subState = AISubState.ChoosingTarget;
-                    this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
+                    if (this.leadAwayAttempts < 2)
+                    {
+                        this.FindDeathPoint();
+                    }
+                    else
+                    {
+                        this.state = AIState.WalkingAround;
+                        this.subState = AISubState.ChoosingTarget;
+                        this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
+                    }
                 }
             }
         }
@@ -120,6 +130,7 @@ public class AISphere : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
 
+        this.leadAwayAttempts = 0;
         this.FindDeathPoint();
     }
 
@@ -145,10 +156,14 @@ public class AISphere : MonoBehaviour
         this.navAgent.SetDestination(closestDeahPoint.position);
     }
 
-    IEnumerator GoToNextSubStateIn(float seconds, AISubState nextState)
+    IEnumerator GoToNextSubStateIn(float seconds, AISubState nextState, AIState startState)
     {
         yield return new WaitForSeconds(seconds);
-        this.subState = nextState;
+
+        if (this.state == startState)
+        {
+            this.subState = nextState;
+        }
     }
 
     private Vector3 GenerateRandomPosAroundPlayer(Vector3 playerPos)

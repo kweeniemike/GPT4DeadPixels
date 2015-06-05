@@ -8,6 +8,9 @@ public class ConnectScript : MonoBehaviour
     public string RoomName = "test_room";
     public Transform PlayerPrefab;
 
+    public Transform SpawnLoc1;
+    public Transform SpawnLoc2;
+
     private bool connectFailed = false;
     private bool readyToConnect = false;
 
@@ -68,7 +71,14 @@ public class ConnectScript : MonoBehaviour
     private void SpawnPlayer()
     {
         // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-        PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.transform.position, Quaternion.identity, 0);
+        if(PhotonNetwork.room.playerCount == 1 && this.SpawnLoc2 != null)
+        {
+            PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLoc1.position, Quaternion.identity, 0);
+        }
+        else
+        {
+            PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLoc2.position, Quaternion.identity, 0);
+        }
     }
 
     // We have two options here: we either joined(by title, list or random) or created a room.
