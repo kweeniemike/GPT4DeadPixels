@@ -18,14 +18,17 @@ public class TorchPuzzle : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        foreach (Torch torch in torches)
+        if (!puzzleComplete)
         {
-            if (!torch.powered)
+            foreach (Torch torch in torches)
             {
-                return;
+                if (!torch.powered)
+                {
+                    return;
+                }
             }
+            Solved();
         }
-        Solved();
     }
 
     public void Solved()
@@ -43,5 +46,6 @@ public class TorchPuzzle : MonoBehaviour {
     {
         AudioSource.PlayClipAtPoint(this.finishedSound, this.transform.position);
         doorObject.SetActive(false);
+        this.puzzleComplete = true;
     }
 }
