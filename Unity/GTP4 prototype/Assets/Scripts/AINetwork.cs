@@ -11,11 +11,13 @@ public class AINetwork : Photon.MonoBehaviour
 
         if (photonView.isMine)
         {
+            Debug.Log("Local AI");
             //MINE: local player, simply enable the local scripts
             this.AIScript.enabled = true;
         }
         else
         {
+            Debug.Log("Remote AI");
             this.AIScript.enabled = false;
         }
 

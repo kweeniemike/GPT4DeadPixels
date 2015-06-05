@@ -7,9 +7,11 @@ public class ConnectScript : MonoBehaviour
     public string PlayerName = "Player";
     public string RoomName = "test_room";
     public Transform PlayerPrefab;
+    public Transform AIPrefab;
 
     public Transform SpawnLoc1;
     public Transform SpawnLoc2;
+    public Transform AISpawnLoc;
 
     private bool connectFailed = false;
     private bool readyToConnect = false;
@@ -79,6 +81,8 @@ public class ConnectScript : MonoBehaviour
         {
             PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLoc2.position, Quaternion.identity, 0);
         }
+
+        PhotonNetwork.Instantiate(this.AIPrefab.name, this.AISpawnLoc.position, Quaternion.identity, 0);
     }
 
     // We have two options here: we either joined(by title, list or random) or created a room.
