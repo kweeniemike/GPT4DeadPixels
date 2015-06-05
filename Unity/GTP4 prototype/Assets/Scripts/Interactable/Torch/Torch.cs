@@ -8,18 +8,21 @@ public class Torch : Interactable
 
     public GameObject torchObject;
     public Light light;
+    public bool powered;
 
     public override void OnInteract()
     {
-        if (this.light.enabled)
+        if (powered)
         {
             this.torchObject.GetComponent<MeshRenderer>().material = unlitMaterial;
             this.light.enabled = false;
+            powered = false;
         }
         else
         {
             this.torchObject.GetComponent<MeshRenderer>().material = litMaterial;
             this.light.enabled = true;
+            powered = true;
         }
     }
 }
