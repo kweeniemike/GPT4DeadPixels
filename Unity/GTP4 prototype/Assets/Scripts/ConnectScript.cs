@@ -82,6 +82,7 @@ public class ConnectScript : MonoBehaviour
         else
         {
             PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLoc2.position, Quaternion.identity, 0);
+            this.SpawnAI.Spawn();
         }
     }
 
@@ -91,7 +92,6 @@ public class ConnectScript : MonoBehaviour
         Debug.Log("OnJoinedRoom");
         Debug.Log("Room: " + PhotonNetwork.room.name);
         this.SpawnPlayer();
-        this.SpawnAI.Spawn();
     }
 
     public void OnPhotonCreateRoomFailed()
