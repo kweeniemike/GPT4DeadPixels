@@ -22,6 +22,7 @@ public class AINetwork : Photon.MonoBehaviour
         }
 
         gameObject.name = gameObject.name + photonView.viewID;
+        Debug.Log("joery is een mongooltje :D");
     }
 
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
