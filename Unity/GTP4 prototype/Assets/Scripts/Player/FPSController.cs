@@ -10,6 +10,7 @@ using Random = UnityEngine.Random;
 public class FPSController : MonoBehaviour
 {
     public bool isControllable = true;
+    public float rotationSpeed = 1.0f;
 
     [SerializeField] private bool m_IsWalking;
     [SerializeField] private float m_WalkSpeed;
@@ -33,6 +34,7 @@ public class FPSController : MonoBehaviour
     private bool m_Jump;
     private float m_YRotation;
     private Vector2 m_Input;
+    private float l_input;
     private Vector3 m_MoveDir = Vector3.zero;
     private CharacterController m_CharacterController;
     private CollisionFlags m_CollisionFlags;
@@ -208,8 +210,10 @@ public class FPSController : MonoBehaviour
         if(this.isControllable)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal Joystick 1");
+            float vertical = CrossPlatformInputManager.GetAxis("Vertical Joystick 1");
+
+            float horizontalLook = CrossPlatformInputManager.GetAxis("Horizontal Look");
 
             bool waswalking = m_IsWalking;
 
@@ -221,6 +225,9 @@ public class FPSController : MonoBehaviour
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
+
+            //Controller look
+            l_input = horizontalLook;
 
             // normalize input if it exceeds 1 in combined length:
             if (m_Input.sqrMagnitude > 1)
@@ -236,7 +243,7 @@ public class FPSController : MonoBehaviour
                 StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
             {
                 RaycastHit hit;
                 if(Physics.Raycast(this.m_Camera.transform.position, m_Camera.transform.forward, out hit))
@@ -263,7 +270,10 @@ public class FPSController : MonoBehaviour
 
     private void RotateView()
     {
-        m_MouseLook.LookRotation (transform, m_Camera.transform);
+        //m_MouseLook.LookRotation (transform, m_Camera.transform);
+
+        Debug.Log(l_input);
+        this.transform.Rotate(Vector3.up, l_input * rotationSpeed * Time.deltaTime);
     }
 
 
