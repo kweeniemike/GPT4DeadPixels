@@ -11,6 +11,7 @@ public class AISphere : MonoBehaviour
 
     public Transform[] DeathPoints;
     public Transform[] SearchWayPoints;
+    public AINetwork Network;
 
     private GameObject targetPlayer = null;
     private AIState state;
@@ -102,7 +103,7 @@ public class AISphere : MonoBehaviour
 
                 if (Vector3.Distance(this.transform.position, this.targetDeathPoint.position) < this.WayPointDistance)
                 {
-                    GameObject.Destroy(this.gameObject);
+                    this.Network.dissapear();
                 }
             }
             else if (this.subState == AISubState.Returning)

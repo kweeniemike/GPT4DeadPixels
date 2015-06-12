@@ -6,6 +6,8 @@ public class ConnectScript : MonoBehaviour
 {
     public string PlayerName = "Player";
     public string RoomName = "test_room";
+    public int CurrentLevel = 0;
+    public string PlayerType = "A";
     public Transform PlayerPrefab;
     public Transform AIPrefab;
 
@@ -66,9 +68,17 @@ public class ConnectScript : MonoBehaviour
             return;
         }
 
-        if (!PhotonNetwork.inRoom && this.readyToConnect)
+        if (!PhotonNetwork.inRoom && PhotonNetwork.connectedAndReady)
         {
-            PhotonNetwork.JoinOrCreateRoom(this.RoomName, new RoomOptions() { maxPlayers = 10, isVisible = false }, TypedLobby.Default);
+            // Try to join a game with the given custom room properties.
+            ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevel }, { "PlayerType", this.PlayerType } };
+            bool joined = PhotonNetwork.JoinRandomRoom(customProperties, 1);
+
+            // If that is not possible, create a new room with those custom room properties.
+            if (!joined)
+            {
+                PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { isOpen = true, isVisible = true, customRoomProperties = customProperties}, TypedLobby.Default);
+            }
         }
     }
 

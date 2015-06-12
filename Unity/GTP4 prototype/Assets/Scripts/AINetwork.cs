@@ -22,7 +22,17 @@ public class AINetwork : Photon.MonoBehaviour
         }
 
         gameObject.name = gameObject.name + photonView.viewID;
-        Debug.Log("joery is een mongooltje :D");
+    }
+
+    public void dissapear()
+    {
+        this.photonView.RPC("DissapearRPC", PhotonTargets.All);
+    }
+
+    [RPC]
+    void DissapearRPC()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
