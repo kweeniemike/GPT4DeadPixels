@@ -75,9 +75,9 @@ public class ConnectScript : MonoBehaviour
             bool joined = PhotonNetwork.JoinRandomRoom(customProperties, 1);
 
             // If that is not possible, create a new room with those custom room properties.
-            if (!joined)
+            if (joined)
             {
-                PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { isOpen = true, isVisible = true, customRoomProperties = customProperties}, TypedLobby.Default);
+                PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { isOpen = true, isVisible = false, customRoomProperties = customProperties}, TypedLobby.Default);
             }
         }
     }

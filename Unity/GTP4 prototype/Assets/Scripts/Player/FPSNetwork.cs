@@ -50,7 +50,7 @@ public class FPSNetwork : Photon.MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            if (child.gameObject.tag == "CameraRig")
+            if (child.gameObject.tag == "MainCamera")
             {
                 this.cameraRig = child.gameObject;
                 break;

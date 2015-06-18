@@ -270,10 +270,9 @@ public class FPSController : MonoBehaviour
 
     private void RotateView()
     {
-        //m_MouseLook.LookRotation (transform, m_Camera.transform);
+        m_MouseLook.LookRotation (transform, m_Camera.transform);
 
-        Debug.Log(l_input);
-        this.transform.Rotate(Vector3.up, l_input * rotationSpeed * Time.deltaTime);
+        //this.transform.Rotate(Vector3.up, l_input * rotationSpeed * Time.deltaTime);
     }
 
 
