@@ -23,7 +23,7 @@ public class FPSNetwork : Photon.MonoBehaviour
             Debug.Log("Mine");
 
             //MINE: local player, simply enable the local scripts
-            this.model.SetActive(false);
+            //this.model.SetActive(false);
             this.cameraRig.SetActive(true);
             this.listener.enabled = true;
             this.pointLight.intensity = 0.1f;

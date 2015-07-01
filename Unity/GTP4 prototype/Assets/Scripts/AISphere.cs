@@ -13,6 +13,8 @@ public class AISphere : MonoBehaviour
     public Transform[] SearchWayPoints;
     public AINetwork Network;
 
+    private RoomData currentRoom;
+
     private GameObject targetPlayer = null;
     private AIState state;
     private AISubState subState;
@@ -20,6 +22,7 @@ public class AISphere : MonoBehaviour
     private Transform targetSearchWayPoint = null;
     private Transform targetDeathPoint = null;
     private Vector3 targetWalkPos = Vector3.zero;
+    private Interactable targetInteractable = null;
 
     private NavMeshAgent navAgent;
 
@@ -38,94 +41,137 @@ public class AISphere : MonoBehaviour
     {
 	    if (this.state == AIState.Searching)
         {
-            if (this.targetSearchWayPoint == null)
-            {
-                this.PickRandomSearchWaypoint(null);
-            }
-            else if (Vector3.Distance(this.transform.position, this.targetSearchWayPoint.position) < WayPointDistance)
-            {
-                this.PickRandomSearchWaypoint(this.targetSearchWayPoint);
-            }
-
-            Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, this.VisionRadius);
-            foreach(Collider col in hitColliders)
-            {
-                if (col.tag == "Player")
-                {
-                    this.targetPlayer = col.gameObject;
-                    this.state = AIState.GoingToPlayer;
-                    break;
-                }
-            }
+            this.HandleSearching();
         }
         else if (this.state == AIState.GoingToPlayer)
         {
-            this.navAgent.SetDestination(this.targetPlayer.transform.position);
-            if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
-            {
-                this.state = AIState.WalkingAround;
-                this.subState = AISubState.ChoosingTarget;
-                this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
-            }
+            this.HandleGoingTo();
         }
         else if (this.state == AIState.WalkingAround)
         {
-            if (this.subState == AISubState.ChoosingTarget)
-            {
-                this.targetWalkPos = GenerateRandomPosAroundPlayer(this.targetPlayer.transform.position);
-                this.navAgent.SetDestination(this.targetWalkPos);
-                this.subState = AISubState.Walking;
-
-                Debug.Log("Find place to walk");
-            }
-            else if (this.subState == AISubState.Walking)
-            {
-                if (Vector3.Distance(this.transform.position, this.targetWalkPos) < this.WayPointDistance)
-                {
-                    this.subState = AISubState.Waiting;
-                    this.navAgent.SetDestination(this.transform.position);
-                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.ChoosingTarget, AIState.WalkingAround));
-                }
-            }
+            this.HandleWalkingAround();
         }
         else if (this.state == AIState.LeadingAway)
         {
-            if (this.subState == AISubState.Walking)
+            this.HandleLeadingAway();
+        }
+	}
+
+    private void HandleSearching()
+    {
+        if (this.targetSearchWayPoint == null)
+        {
+            this.PickRandomSearchWaypoint(null);
+        }
+        else if (Vector3.Distance(this.transform.position, this.targetSearchWayPoint.position) < WayPointDistance)
+        {
+            this.PickRandomSearchWaypoint(this.targetSearchWayPoint);
+        }
+
+        Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, this.VisionRadius);
+        foreach (Collider col in hitColliders)
+        {
+            if (col.tag == "Player")
             {
-                if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) > this.OuterLeadDistance)
-                {
-                    this.leadAwayAttempts++;
-                    this.navAgent.SetDestination(this.transform.position);
-                    this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.Returning, AIState.LeadingAway));
-
-                    this.subState = AISubState.Waiting;
-                }
-
-                if (Vector3.Distance(this.transform.position, this.targetDeathPoint.position) < this.WayPointDistance)
-                {
-                    this.Network.dissapear();
-                }
+                this.targetPlayer = col.gameObject;
+                this.state = AIState.GoingToPlayer;
+                break;
             }
-            else if (this.subState == AISubState.Returning)
-            {
-                this.navAgent.SetDestination(this.targetPlayer.transform.position);
+        }
+    }
 
-                if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
+    private void HandleGoingTo()
+    {
+        this.navAgent.SetDestination(this.targetPlayer.transform.position);
+        if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
+        {
+            this.state = AIState.WalkingAround;
+            this.subState = AISubState.ChoosingTarget;
+            this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
+        }
+    }
+
+    private void HandleWalkingAround()
+    {
+        if (this.subState == AISubState.ChoosingTarget)
+        {
+            // Choose whether or not we're going to interact with something
+            if (this.currentRoom.interactables != null && this.currentRoom.interactables.Length != 0 && Random.Range(0, 10) >= 3)
+            {
+                // Interact with something
+                // Pick something to interact with
+                this.targetInteractable = this.currentRoom.interactables[Random.Range(0, this.currentRoom.interactables.Length)];
+                // Set out target walk position to the position of the interactable
+                this.targetWalkPos = this.targetInteractable.transform.position;
+            }
+            else
+            {
+                // Just walk around the player
+                this.targetWalkPos = GenerateRandomPosAroundPlayer(this.targetPlayer.transform.position);
+                this.targetInteractable = null;
+
+                Debug.Log("Find place to walk");
+            }
+
+            // Move to target location
+            this.navAgent.SetDestination(this.targetWalkPos);
+            this.subState = AISubState.Walking;
+        }
+        else if (this.subState == AISubState.Walking)
+        {
+            if (Vector3.Distance(this.transform.position, this.targetWalkPos) < this.WayPointDistance)
+            {
+                // Were we going to interact with something?
+                if (this.targetInteractable != null)
                 {
-                    if (this.leadAwayAttempts < 2)
-                    {
-                        this.FindDeathPoint();
-                    }
-                    else
-                    {
-                        this.state = AIState.WalkingAround;
-                        this.subState = AISubState.ChoosingTarget;
-                        this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
-                    }
+                    this.targetInteractable.Interact();
+                }
+
+                // Wait a little bit before we do anything else
+                this.subState = AISubState.Waiting;
+                this.navAgent.SetDestination(this.transform.position);
+                this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.ChoosingTarget, AIState.WalkingAround));
+            }
+        }
+    }
+
+    private void HandleLeadingAway()
+    {
+        if (this.subState == AISubState.Walking)
+        {
+            if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) > this.OuterLeadDistance)
+            {
+                this.leadAwayAttempts++;
+                this.navAgent.SetDestination(this.transform.position);
+                this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.Returning, AIState.LeadingAway));
+
+                this.subState = AISubState.Waiting;
+            }
+
+            if (Vector3.Distance(this.transform.position, this.targetDeathPoint.position) < this.WayPointDistance)
+            {
+                this.Network.dissapear();
+            }
+        }
+        else if (this.subState == AISubState.Returning)
+        {
+            this.navAgent.SetDestination(this.targetPlayer.transform.position);
+
+            if (Vector3.Distance(this.transform.position, this.targetPlayer.transform.position) < this.WayPointDistance)
+            {
+                if (this.leadAwayAttempts < 2)
+                {
+                    this.FindDeathPoint();
+                }
+                else
+                {
+                    this.state = AIState.WalkingAround;
+                    this.subState = AISubState.ChoosingTarget;
+                    this.StartCoroutine(this.WalkAroundFor(Random.Range(5.0f, 21.0f)));
                 }
             }
         }
-	}
+    }
 
     IEnumerator WalkAroundFor(float seconds)
     {
@@ -190,6 +236,27 @@ public class AISphere : MonoBehaviour
 
         this.targetSearchWayPoint = newTarget;
         this.navAgent.SetDestination(this.targetSearchWayPoint.position);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Room")
+        {
+            this.currentRoom = other.GetComponent<RoomData>();
+        }
+    }
+
+    public void OnCollisionEnter(Collision coll)
+    {
+        // Open door if I run into it.
+        if (coll.collider.tag == "Interactable")
+        {
+            Door door = coll.collider.GetComponent<Door>();
+            if (door != null)
+            {
+                door.Interact();
+            }
+        }
     }
 }
 

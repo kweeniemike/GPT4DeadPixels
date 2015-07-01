@@ -7,22 +7,22 @@ public class Torch : Interactable
     public Material unlitMaterial;
 
     public GameObject torchObject;
-    public Light light;
+    public Light pointLight;
     public bool powered;
 
-    void Start()
+    new void Start()
     {
         base.Start();
 
         if (!powered)
         {
             this.torchObject.GetComponent<MeshRenderer>().material = unlitMaterial;
-            this.light.enabled = false;
+            this.pointLight.enabled = false;
         }
         else
         {
             this.torchObject.GetComponent<MeshRenderer>().material = litMaterial;
-            this.light.enabled = true;
+            this.pointLight.enabled = true;
         }
     }
 
@@ -31,13 +31,13 @@ public class Torch : Interactable
         if (powered)
         {
             this.torchObject.GetComponent<MeshRenderer>().material = unlitMaterial;
-            this.light.enabled = false;
+            this.pointLight.enabled = false;
             powered = false;
         }
         else
         {
             this.torchObject.GetComponent<MeshRenderer>().material = litMaterial;
-            this.light.enabled = true;
+            this.pointLight.enabled = true;
             powered = true;
         }
     }

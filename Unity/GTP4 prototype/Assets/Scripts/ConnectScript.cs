@@ -5,20 +5,21 @@ using System;
 public class ConnectScript : MonoBehaviour 
 {
     public string PlayerName = "Player";
-    public string RoomName = "test_room";
-    public int CurrentLevel = 0;
+    public int CurrentLevelId = 0;
+    public int CurrentSubLevelId = 0;
     public string PlayerType = "A";
+
+    public float MaxTimeTogether = 60.0f;
+
     public Transform PlayerPrefab;
-    public Transform AIPrefab;
 
     public Transform SpawnLoc1;
     public Transform SpawnLoc2;
-    public Transform AISpawnLoc;
 
     public SpawnAI SpawnAI;
 
+    private float timeSpendTogether = 0.0f;
     private bool connectFailed = false;
-    private bool readyToConnect = false;
 
     public void Awake()
     {
@@ -70,16 +71,15 @@ public class ConnectScript : MonoBehaviour
 
         if (!PhotonNetwork.inRoom && PhotonNetwork.connectedAndReady)
         {
-            // Try to join a game with the given custom room properties.
-            ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevel }, { "PlayerType", this.PlayerType } };
-            bool joined = PhotonNetwork.JoinRandomRoom(customProperties, 1);
-
-            // If that is not possible, create a new room with those custom room properties.
-            if (joined)
-            {
-                PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { isOpen = true, isVisible = false, customRoomProperties = customProperties}, TypedLobby.Default);
-            }
+            this.JoinRoom();
         }
+    }
+
+    private void JoinRoom()
+    {
+        // Try to join a game with the given custom room properties.
+        ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevelId }, { "SubLevelId", this.CurrentSubLevelId } };
+        bool joined = PhotonNetwork.JoinRandomRoom(customProperties, 0);
     }
 
     private void SpawnPlayer()
@@ -115,7 +115,9 @@ public class ConnectScript : MonoBehaviour
     }
     public void OnPhotonRandomJoinFailed()
     {
-        Debug.Log("OnPhotonRandomJoinFailed got called. Happens if no room is available (or all full or invisible or closed). JoinrRandom filter-options can limit available rooms.");
+        // If the join fails, create a new room with the custom properties
+        ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevelId }, { "SubLevelId", this.CurrentSubLevelId } };
+        PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { maxPlayers = 2, isOpen = true, isVisible = true, customRoomProperties = customProperties, customRoomPropertiesForLobby = new string[]{ "LevelId", "PlayerType" } }, TypedLobby.Default);
     }
 
     public void OnCreatedRoom()
@@ -136,6 +138,6 @@ public class ConnectScript : MonoBehaviour
 
     public void OnJoinedLobby()
     {
-        this.readyToConnect = true;
+
     }
 }

@@ -10,6 +10,7 @@ using Random = UnityEngine.Random;
 public class FPSController : MonoBehaviour
 {
     public bool isControllable = true;
+    public bool keyboardControlled = true;
     public float rotationSpeed = 1.0f;
 
     [SerializeField] private bool m_IsWalking;
@@ -210,10 +211,10 @@ public class FPSController : MonoBehaviour
         if(this.isControllable)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal Joystick 1");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical Joystick 1");
+            float horizontal = !keyboardControlled ? CrossPlatformInputManager.GetAxis("Horizontal Joystick 1") : Input.GetAxis("Horizontal");
+            float vertical = !keyboardControlled ? CrossPlatformInputManager.GetAxis("Vertical Joystick 1") : Input.GetAxis("Vertical");
 
-            float horizontalLook = CrossPlatformInputManager.GetAxis("Horizontal Look");
+            float horizontalLook = !keyboardControlled ? CrossPlatformInputManager.GetAxis("Horizontal Look") : 0.0f;
 
             bool waswalking = m_IsWalking;
 
@@ -270,9 +271,12 @@ public class FPSController : MonoBehaviour
 
     private void RotateView()
     {
-        m_MouseLook.LookRotation (transform, m_Camera.transform);
+        m_MouseLook.LookRotation(transform, m_Camera.transform);
 
-        //this.transform.Rotate(Vector3.up, l_input * rotationSpeed * Time.deltaTime);
+        if(keyboardControlled)
+        {
+            this.transform.Rotate(Vector3.up, l_input * rotationSpeed * Time.deltaTime);
+        }
     }
 
 
