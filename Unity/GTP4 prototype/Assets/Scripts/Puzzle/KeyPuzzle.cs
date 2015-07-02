@@ -6,15 +6,16 @@ public class KeyPuzzle : Interactable
 {
     public AudioClip finishedSound;
     public GameObject doorObject;
-    public List<Key> keys;
     public List<GameObject> keyObjects;
+    public List<GameObject> keyInDoorObjects;
     private bool puzzleComplete = false;
     private PhotonView photonView;
-
+     
     // Use this for initialization
     void Start()
     {
-        this.photonView = this.GetComponent<PhotonView>();
+        base.Start();
+        this.photonView = base.getPhotonView();
     }
 
     // Update is called once per frame
@@ -27,26 +28,24 @@ public class KeyPuzzle : Interactable
     {
         if (!puzzleComplete)
         {
-            foreach (Key key in keys)
+            bool notCompleted = false;
+            foreach (GameObject keyObject in keyObjects)
             {
-                if (key.gameObject.activeSelf)
+                if (!keyObject.activeSelf)
                 {
-                    InputKey();
-                    return;
+                    keyInDoorObjects[keyObjects.IndexOf(keyObject)].SetActive(true);
+                }
+                else
+                {
+                    notCompleted = true;
                 }
             }
-            KeySolved();
-        }
-    }
 
-    public void InputKey()
-    {
-        foreach (GameObject keyObject in keyObjects)
-        {
-            if (!keyObject.activeSelf)
+            if (notCompleted)
             {
-                //wil hier kijken of een object al disabled is, dus een key is opgepakt. Op dat moment slechts 1 key per disabled object enablen op de deur. Maybe counteR?
+                return;
             }
+            KeySolved();
         }
     }
 

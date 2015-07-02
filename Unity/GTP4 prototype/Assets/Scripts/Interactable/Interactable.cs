@@ -10,6 +10,11 @@ public abstract class Interactable : MonoBehaviour
     {
         this.photonView = this.GetComponent<PhotonView>();
 	}
+
+    public PhotonView getPhotonView()
+    {
+        return photonView;
+    }
 	
 	public void Interact()
     {
