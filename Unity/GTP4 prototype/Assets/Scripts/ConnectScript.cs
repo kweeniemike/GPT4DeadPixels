@@ -9,16 +9,10 @@ public class ConnectScript : MonoBehaviour
     public int CurrentSubLevelId = 0;
     public string PlayerType = "A";
 
-    public float MaxTimeTogether = 60.0f;
-
     public Transform PlayerPrefab;
 
-    public Transform SpawnLoc1;
-    public Transform SpawnLoc2;
+    public Transform[] SpawnLocs;
 
-    public SpawnAI SpawnAI;
-
-    private float timeSpendTogether = 0.0f;
     private bool connectFailed = false;
 
     public void Awake()
@@ -84,16 +78,8 @@ public class ConnectScript : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-        if(PhotonNetwork.room.playerCount == 1 && this.SpawnLoc2 != null)
-        {
-            PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLoc1.position, Quaternion.identity, 0);
-        }
-        else
-        {
-            PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLoc2.position, Quaternion.identity, 0);
-            this.SpawnAI.Spawn();
-        }
+        // Spawns a player at a random spawn location
+        PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLocs[UnityEngine.Random.Range(0, this.SpawnLocs.Length)].position, Quaternion.identity, 0);
     }
 
     // We have two options here: we either joined(by title, list or random) or created a room.
@@ -102,6 +88,8 @@ public class ConnectScript : MonoBehaviour
         Debug.Log("OnJoinedRoom");
         Debug.Log("Room: " + PhotonNetwork.room.name);
         this.SpawnPlayer();
+
+        //AIManager.Instance.Init();
     }
 
     public void OnPhotonCreateRoomFailed()
@@ -115,9 +103,11 @@ public class ConnectScript : MonoBehaviour
     }
     public void OnPhotonRandomJoinFailed()
     {
+        int maxPlayerAmount = UnityEngine.Random.Range(0, 2) + 1;
+
         // If the join fails, create a new room with the custom properties
         ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevelId }, { "SubLevelId", this.CurrentSubLevelId } };
-        PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { maxPlayers = 2, isOpen = true, isVisible = true, customRoomProperties = customProperties, customRoomPropertiesForLobby = new string[]{ "LevelId", "PlayerType" } }, TypedLobby.Default);
+        PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { maxPlayers = (byte)maxPlayerAmount, isOpen = true, isVisible = true, customRoomProperties = customProperties, customRoomPropertiesForLobby = new string[] { "LevelId", "PlayerType" } }, TypedLobby.Default);
     }
 
     public void OnCreatedRoom()

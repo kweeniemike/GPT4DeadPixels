@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class AIManager : MonoBehaviour 
 {
+    public static AIManager Instance;
+
     public Transform AIPrefab;
     public Transform[] AISpawnLocs;
 
@@ -12,16 +14,37 @@ public class AIManager : MonoBehaviour
 
     private List<AISphere> AIs = new List<AISphere>();
 
-	// Use this for initialization
-	void Start ()
+	public void Awake()
     {
-	
-	}
+        if (AIManager.Instance == null)
+        {
+            AIManager.Instance = this;
+        }
+    }
+
+    public void Init()
+    {
+        if (!PhotonNetwork.isMasterClient || (PhotonNetwork.isMasterClient && PhotonNetwork.room.maxPlayers == 2)) this.enabled = false;
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-	    
+        // Loop through all AIs and check if they are still alive, if not, remove them
+        for (int i = 0; i < AIs.Count; i++)
+        {
+            if (!AIs[i].IsAlive)
+            {
+                AIs[i].Network.dissapear();
+                AIs.Remove(AIs[i]);
+                i--;
+            }
+        }
+
+        if (AIs.Count == 0)
+        {
+            this.SpawnAI();
+        }
 	}
 
     public void SpawnAI()

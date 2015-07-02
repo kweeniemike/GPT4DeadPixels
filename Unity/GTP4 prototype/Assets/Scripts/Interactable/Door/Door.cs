@@ -5,6 +5,8 @@ public class Door : Interactable
 {
     public GameObject doorObject;
 
+    public bool IsOpen { get { return !this.doorObject.activeSelf; } }
+
     public override void OnInteract()
     {
         if(this.doorObject !=  null)

@@ -13,6 +13,8 @@ public class AISphere : MonoBehaviour
     public Transform[] SearchWayPoints;
     public AINetwork Network;
 
+    public bool IsAlive { get; private set; }
+
     private RoomData currentRoom;
 
     private GameObject targetPlayer = null;
@@ -34,6 +36,7 @@ public class AISphere : MonoBehaviour
         this.state = AIState.Searching;
         this.subState = AISubState.Walking;
         this.navAgent = this.GetComponent<NavMeshAgent>();
+        this.IsAlive = true;
 	}
 	
 	// Update is called once per frame
@@ -128,9 +131,11 @@ public class AISphere : MonoBehaviour
                 }
 
                 // Wait a little bit before we do anything else
+                float waitTime = this.targetInteractable == null ? Random.Range(1.5f, 5.0f) : Random.Range(0.25f, 1.0f);
+
                 this.subState = AISubState.Waiting;
                 this.navAgent.SetDestination(this.transform.position);
-                this.StartCoroutine(GoToNextSubStateIn(Random.Range(1.5f, 5.0f), AISubState.ChoosingTarget, AIState.WalkingAround));
+                this.StartCoroutine(GoToNextSubStateIn(waitTime, AISubState.ChoosingTarget, AIState.WalkingAround));
             }
         }
     }
@@ -150,7 +155,7 @@ public class AISphere : MonoBehaviour
 
             if (Vector3.Distance(this.transform.position, this.targetDeathPoint.position) < this.WayPointDistance)
             {
-                this.Network.dissapear();
+                this.IsAlive = false;
             }
         }
         else if (this.subState == AISubState.Returning)
@@ -240,21 +245,21 @@ public class AISphere : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.tag);
+
         if (other.tag == "Room")
         {
             this.currentRoom = other.GetComponent<RoomData>();
         }
-    }
-
-    public void OnCollisionEnter(Collision coll)
-    {
-        // Open door if I run into it.
-        if (coll.collider.tag == "Interactable")
+        else if (other.tag == "Interactable")
         {
-            Door door = coll.collider.GetComponent<Door>();
+            Door door = other.GetComponent<Door>();
             if (door != null)
             {
-                door.Interact();
+                if (!door.IsOpen)
+                {
+                    door.Interact();
+                }
             }
         }
     }

@@ -1,223 +1,753 @@
-Initialize engine version: 5.0.2f1 (0b02744d4013)
+Initialize engine version: 5.0.3f2 (c28c7860811c)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon HD 7640G (ID=0x9903)
+    Renderer: AMD Radeon R9 200 Series (ID=0x67b1)
     Vendor:   ATI
-    VRAM:     479 MB
+    VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\websocket-sharp.dll (this message is harmless)
-Loading C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\websocket-sharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.256 seconds
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\websocket-sharp.dll (this message is harmless)
+Loading E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\websocket-sharp.dll into Unity Child Domain
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.176 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Stan\Desktop\School\Game Design\S4\GTP4\GTP4 prototype\otherbuild_Data\Managed\System.dll (this message is harmless)
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\otherbuild_Data\Managed\System.dll (this message is harmless)
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
 
-Setting up 1 worker threads for Enlighten.
-Connecting to: ns.exitgames.com:5058
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
-  Thread -> id: 1328 -> priority: 1 
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: a94 -> priority: 1 
+  Thread -> id: 1ed0 -> priority: 1 
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
 
-Connecting to: ns.exitgames.com:5058
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Connecting to: ns.exitgames.com:5058
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Connecting to: ns.exitgames.com:5058
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Connecting to: ns.exitgames.com:5058
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Connecting to: ns.exitgames.com:5058
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Connecting to: ns.exitgames.com:5058
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Connecting to: ns.exitgames.com:5058
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Connecting to: ns.exitgames.com:5058
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
+
+Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
+
+Connecting to: ns.exitgames.com:5058
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: 37.58.117.146:5055
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: 37.58.117.146:5055
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: 37.58.117.146:5055
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: 37.58.117.146:5055
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: 37.58.117.146:5055
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: 37.58.117.146:5055
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
+
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
 Connecting to: 37.58.117.146:5055
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:51)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 51)
 
-Connecting to: 37.58.117.146:5055
+Cannot send messages when not connected. Either connect to Photon OR use offline mode!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+PhotonNetwork:VerifyCanUseNetwork() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2715)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2565)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2715)
 
-Connecting to: 37.58.117.146:5055
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-Connecting to: 37.58.117.146:5055
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-Connecting to: 37.58.117.146:5055
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
-JoinOrCreateRoom failed. Client is not on Master Server or not yet ready to call operations. Wait for callback: OnJoinedLobby or OnConnectedToMaster.
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
+
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
+
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
+
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
+
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
+
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
+
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
+
+Cannot send RPCs in Lobby! RPC dropped.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+PhotonNetwork:RPC(PhotonView, String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2572)
+PhotonView:RpcSecure(String, PhotonTargets, Boolean, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:608)
+PhotonView:RPC(String, PhotonTargets, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs:582)
+TorchPuzzle:Solved() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:36)
+TorchPuzzle:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Puzzle\TorchPuzzle.cs:30)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs Line: 2572)
 
 OnCreatedRoom
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:OnCreatedRoom() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:120)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1925)
+NetworkingPeer:GameEnteredOnGameServer(OperationResponse) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:851)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1168)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 120)
 
 OnJoinedRoom
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:OnJoinedRoom() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:98)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1925)
+NetworkingPeer:OnEvent(EventData) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1755)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 98)
 
-Room: test_room
+Room: Room3858
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:OnJoinedRoom() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:99)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1925)
+NetworkingPeer:OnEvent(EventData) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1755)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 99)
+
+Mine
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+FPSNetwork:Awake() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Player\FPSNetwork.cs:23)
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObject.gen.cs:60)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:80)
+NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2355)
+PhotonNetwork:Instantiate(String, Vector3, Quaternion, Int32, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2217)
+PhotonNetwork:Instantiate(String, Vector3, Quaternion, Int32) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2161)
+ConnectScript:SpawnPlayer() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:86)
+ConnectScript:OnJoinedRoom() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:100)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1925)
+NetworkingPeer:OnEvent(EventData) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1755)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/Player/FPSNetwork.cs Line: 23)
+
+Others
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+FPSNetwork:Awake() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\Player\FPSNetwork.cs:35)
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObject.gen.cs:60)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:80)
+NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2355)
+NetworkingPeer:OnEvent(EventData) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1811)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/Player/FPSNetwork.cs Line: 35)
+
+Remote AI
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+AINetwork:Awake() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\AINetwork.cs:20)
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObject.gen.cs:60)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:80)
+NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2355)
+NetworkingPeer:OnEvent(EventData) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1811)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
+ 
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/AINetwork.cs Line: 20)
 
 Disconnected from Photon.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+ConnectScript:OnDisconnectedFromPhoton() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Scripts\ConnectScript.cs:125)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1925)
+NetworkingPeer:OnStatusChanged(StatusCode) (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1500)
+ExitGames.Client.Photon.EnetPeer:Disconnect()
+ExitGames.Client.Photon.PhotonPeer:Disconnect()
+NetworkingPeer:Disconnect() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:426)
+PhotonNetwork:Disconnect() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:1344)
+PhotonHandler:OnApplicationQuit() (at E:\Git\GPT4DeadPixels\Unity\GTP4 prototype\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:56)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename: E:/Git/GPT4DeadPixels/Unity/GTP4 prototype/Assets/Scripts/ConnectScript.cs Line: 125)
 
