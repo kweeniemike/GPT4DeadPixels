@@ -13,6 +13,7 @@ public class AIManager : MonoBehaviour
     public Transform[] DeathWaypoints;
 
     private List<AISphere> AIs = new List<AISphere>();
+    private bool inited = false;
 
 	public void Awake()
     {
@@ -24,26 +25,31 @@ public class AIManager : MonoBehaviour
 
     public void Init()
     {
+        this.inited = true;
+
         if (!PhotonNetwork.isMasterClient || (PhotonNetwork.isMasterClient && PhotonNetwork.room.maxPlayers == 2)) this.enabled = false;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        // Loop through all AIs and check if they are still alive, if not, remove them
-        for (int i = 0; i < AIs.Count; i++)
+        if (this.inited)
         {
-            if (!AIs[i].IsAlive)
+            // Loop through all AIs and check if they are still alive, if not, remove them
+            for (int i = 0; i < AIs.Count; i++)
             {
-                AIs[i].Network.dissapear();
-                AIs.Remove(AIs[i]);
-                i--;
+                if (!AIs[i].IsAlive)
+                {
+                    AIs[i].Network.dissapear();
+                    AIs.Remove(AIs[i]);
+                    i--;
+                }
             }
-        }
 
-        if (AIs.Count == 0)
-        {
-            this.SpawnAI();
+            if (AIs.Count == 0)
+            {
+                this.SpawnAI();
+            }
         }
 	}
 

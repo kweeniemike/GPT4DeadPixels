@@ -89,7 +89,7 @@ public class ConnectScript : MonoBehaviour
         Debug.Log("Room: " + PhotonNetwork.room.name);
         this.SpawnPlayer();
 
-        //AIManager.Instance.Init();
+        AIManager.Instance.Init();
     }
 
     public void OnPhotonCreateRoomFailed()
