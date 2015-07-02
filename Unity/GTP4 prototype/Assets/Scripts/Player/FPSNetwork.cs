@@ -26,7 +26,7 @@ public class FPSNetwork : Photon.MonoBehaviour
             this.model.SetActive(false);
             this.cameraRig.SetActive(true);
             this.listener.enabled = true;
-            this.pointLight.intensity = 0.2f;
+            this.pointLight.intensity = 0.4f;
             this.pointLight.flare = null;
             this.fpsController.enabled = true;
         }
@@ -38,7 +38,7 @@ public class FPSNetwork : Photon.MonoBehaviour
             this.model.SetActive(true);
             this.listener.enabled = false;
 
-            this.pointLight.intensity = 0.5f;
+            this.pointLight.intensity = 0.75f;
             this.fpsController.enabled = true;
             this.fpsController.isControllable = false;
         }
