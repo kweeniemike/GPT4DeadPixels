@@ -5,31 +5,49 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof (CharacterController))]
-[RequireComponent(typeof (AudioSource))]
+[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(AudioSource))]
 public class FPSController : MonoBehaviour
 {
     public bool isControllable = true;
     public bool keyboardControlled = true;
     public float rotationSpeed = 1.0f;
 
-    [SerializeField] private bool m_IsWalking;
-    [SerializeField] private float m_WalkSpeed;
-    [SerializeField] private float m_RunSpeed;
-    [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
-    [SerializeField] private float m_JumpSpeed;
-    [SerializeField] private float m_StickToGroundForce;
-    [SerializeField] private float m_GravityMultiplier;
-    [SerializeField] private MouseLook m_MouseLook;
-    [SerializeField] private bool m_UseFovKick;
-    [SerializeField] private FOVKick m_FovKick = new FOVKick();
-    [SerializeField] private bool m_UseHeadBob;
-    [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
-    [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
-    [SerializeField] private float m_StepInterval;
-    [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-    [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
-    [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+    [SerializeField]
+    private bool m_IsWalking;
+    [SerializeField]
+    private float m_WalkSpeed;
+    [SerializeField]
+    private float m_RunSpeed;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float m_RunstepLenghten;
+    [SerializeField]
+    private float m_JumpSpeed;
+    [SerializeField]
+    private float m_StickToGroundForce;
+    [SerializeField]
+    private float m_GravityMultiplier;
+    [SerializeField]
+    private MouseLook m_MouseLook;
+    [SerializeField]
+    private bool m_UseFovKick;
+    [SerializeField]
+    private FOVKick m_FovKick = new FOVKick();
+    [SerializeField]
+    private bool m_UseHeadBob;
+    [SerializeField]
+    private CurveControlledBob m_HeadBob = new CurveControlledBob();
+    [SerializeField]
+    private LerpControlledBob m_JumpBob = new LerpControlledBob();
+    [SerializeField]
+    private float m_StepInterval;
+    [SerializeField]
+    private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
+    [SerializeField]
+    private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
+    [SerializeField]
+    private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
     private Camera m_Camera;
     private bool m_Jump;
@@ -60,10 +78,10 @@ public class FPSController : MonoBehaviour
         m_FovKick.Setup(m_Camera);
         m_HeadBob.Setup(m_Camera, m_StepInterval);
         m_StepCycle = 0f;
-        m_NextStep = m_StepCycle/2f;
+        m_NextStep = m_StepCycle / 2f;
         m_Jumping = false;
         m_AudioSource = GetComponent<AudioSource>();
-		m_MouseLook.Init(transform , m_Camera.transform);
+        m_MouseLook.Init(transform, m_Camera.transform);
 
         oculusConnected = OVRManager.instance.isVRPresent;
 
@@ -71,7 +89,7 @@ public class FPSController : MonoBehaviour
         {
             Debug.Log("Oculus not connected");
             camera = transform.Find("OVRCameraRig/TrackingSpace/");
-            if(camera != null)
+            if (camera != null)
                 Debug.Log("Camera set");
             else
                 Debug.Log("Camera not found");
@@ -121,16 +139,16 @@ public class FPSController : MonoBehaviour
         float speed;
         GetInput(out speed);
         // always move along the camera forward as it is the direction that it being aimed at
-        Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
+        Vector3 desiredMove = transform.forward * m_Input.y + transform.right * m_Input.x;
 
         // get a normal for the surface that is being touched to move along it
         RaycastHit hitInfo;
         Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
-                            m_CharacterController.height/2f);
+                            m_CharacterController.height / 2f);
         desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
-        m_MoveDir.x = desiredMove.x*speed;
-        m_MoveDir.z = desiredMove.z*speed;
+        m_MoveDir.x = desiredMove.x * speed;
+        m_MoveDir.z = desiredMove.z * speed;
 
 
         if (m_CharacterController.isGrounded)
@@ -147,9 +165,9 @@ public class FPSController : MonoBehaviour
         }
         else
         {
-            m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+            m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
         }
-        m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
+        m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.fixedDeltaTime);
 
         ProgressStepCycle(speed);
         UpdateCameraPosition(speed);
@@ -167,7 +185,7 @@ public class FPSController : MonoBehaviour
     {
         if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
         {
-            m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
+            m_StepCycle += (m_CharacterController.velocity.magnitude + (speed * (m_IsWalking ? 1f : m_RunstepLenghten))) *
                             Time.fixedDeltaTime;
         }
 
@@ -210,7 +228,7 @@ public class FPSController : MonoBehaviour
         {
             m_Camera.transform.localPosition =
                 m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
-                                    (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
+                                    (speed * (m_IsWalking ? 1f : m_RunstepLenghten)));
             newCameraPosition = m_Camera.transform.localPosition;
             newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
         }
@@ -225,7 +243,7 @@ public class FPSController : MonoBehaviour
 
     private void GetInput(out float speed)
     {
-        if(this.isControllable)
+        if (this.isControllable)
         {
             // Read input
             float horizontal = !keyboardControlled ? CrossPlatformInputManager.GetAxis("Horizontal Joystick 1") : Input.GetAxis("Horizontal");
@@ -266,10 +284,10 @@ public class FPSController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
             {
                 RaycastHit hit;
-                if(Physics.Raycast(this.m_Camera.transform.position, m_Camera.transform.forward, out hit))
+                if (Physics.Raycast(this.m_Camera.transform.position, m_Camera.transform.forward, out hit))
                 {
                     Debug.Log(hit.collider.tag);
-                    if(hit.collider.tag == "Interactable")
+                    if (hit.collider.tag == "Interactable")
                     {
                         Interactable inter = hit.collider.GetComponent<Interactable>();
                         if (inter == null) inter = hit.collider.GetComponentInParent<Interactable>();
@@ -294,12 +312,13 @@ public class FPSController : MonoBehaviour
         //m_MouseLook.LookRotation(transform, m_Camera.transform);
 
         transform.Rotate(Vector3.up, lookH_input * rotationSpeed * Time.deltaTime);
+
         if (camera != null)
         {
             camera.Rotate(Vector3.right, lookV_input * rotationSpeed * Time.deltaTime);
             vLookRotation -= lookV_input * rotationSpeed * Time.deltaTime;
             vLookRotation = Mathf.Clamp(vLookRotation, -30, 30);
-            camera.rotation = Quaternion.Euler(-vLookRotation, 0, 0);
+            camera.localRotation = Quaternion.Euler(-vLookRotation, 0, 0);
         }
     }
 
@@ -317,6 +336,6 @@ public class FPSController : MonoBehaviour
         {
             return;
         }
-        body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        body.AddForceAtPosition(m_CharacterController.velocity * 0.1f, hit.point, ForceMode.Impulse);
     }
 }
