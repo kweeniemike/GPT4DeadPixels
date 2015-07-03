@@ -244,18 +244,18 @@ public class FPSController : MonoBehaviour
                 StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
             }
 
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
+            RaycastHit hit;
+            if(Physics.Raycast(this.m_Camera.transform.position, m_Camera.transform.forward, out hit))
             {
-                RaycastHit hit;
-                if(Physics.Raycast(this.m_Camera.transform.position, m_Camera.transform.forward, out hit))
+                if(hit.collider.tag == "Interactable")
                 {
-                    Debug.Log(hit.collider.tag);
-                    if(hit.collider.tag == "Interactable")
-                    {
-                        Interactable inter = hit.collider.GetComponent<Interactable>();
-                        if (inter == null) inter = hit.collider.GetComponentInParent<Interactable>();
+                    Interactable inter = hit.collider.GetComponent<Interactable>();
+                    if (inter == null) inter = hit.collider.GetComponentInParent<Interactable>();
 
-                        if (inter != null)
+                    if (inter != null)
+                    {
+                        inter.OnLookAt();
+                        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
                         {
                             inter.Interact();
                         }
