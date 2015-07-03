@@ -9,7 +9,7 @@ public class AINetwork : Photon.MonoBehaviour
     {
         this.AIScript = GetComponentInChildren<AISphere>();
 
-        if (true)
+        if (photonView.isMine)
         {
             Debug.Log("Local AI");
             //MINE: local player, simply enable the local scripts
@@ -54,10 +54,10 @@ public class AINetwork : Photon.MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (!photonView.isMine)
-        //{
-        //    //Update remote player (smooth this, this looks good, at the cost of some accuracy)
-        //    transform.position = Vector3.Lerp(transform.position, correctPlayerPos, Time.deltaTime * 5);
-        //}
+        if (!photonView.isMine)
+        {
+            //Update remote player (smooth this, this looks good, at the cost of some accuracy)
+            transform.position = Vector3.Lerp(transform.position, correctPlayerPos, Time.deltaTime * 5);
+        }
     }
 }
