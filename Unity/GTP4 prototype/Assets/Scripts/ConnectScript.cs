@@ -15,6 +15,8 @@ public class ConnectScript : MonoBehaviour
 
     private bool connectFailed = false;
 
+    private int nextSpawn = 0;
+
     public void Awake()
     {
         // this makes sure we can use PhotonNetwork.LoadLevel() on the master client and all clients in the same room sync their level automatically
@@ -79,7 +81,8 @@ public class ConnectScript : MonoBehaviour
     private void SpawnPlayer()
     {
         // Spawns a player at a random spawn location
-        PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLocs[UnityEngine.Random.Range(0, this.SpawnLocs.Length)].position, Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(this.PlayerPrefab.name, this.SpawnLocs[nextSpawn].position, Quaternion.identity, 0);
+        nextSpawn++;
     }
 
     // We have two options here: we either joined(by title, list or random) or created a room.
