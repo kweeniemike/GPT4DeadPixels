@@ -35,7 +35,8 @@ public class FPSController : MonoBehaviour
     private bool m_Jump;
     private float m_YRotation;
     private Vector2 m_Input;
-    private float l_input;
+    private float lookH_input;
+    private float lookV_input;
     private Vector3 m_MoveDir = Vector3.zero;
     private CharacterController m_CharacterController;
     private CollisionFlags m_CollisionFlags;
@@ -45,6 +46,10 @@ public class FPSController : MonoBehaviour
     private float m_NextStep;
     private bool m_Jumping;
     private AudioSource m_AudioSource;
+
+    private bool oculusConnected;
+    private Transform camera;
+    private float vLookRotation;
 
     // Use this for initialization
     private void Start()
@@ -59,6 +64,18 @@ public class FPSController : MonoBehaviour
         m_Jumping = false;
         m_AudioSource = GetComponent<AudioSource>();
 		m_MouseLook.Init(transform , m_Camera.transform);
+
+        oculusConnected = OVRManager.instance.isVRPresent;
+
+        if (!oculusConnected)
+        {
+            Debug.Log("Oculus not connected");
+            camera = transform.Find("OVRCameraRig/TrackingSpace/");
+            if(camera != null)
+                Debug.Log("Camera set");
+            else
+                Debug.Log("Camera not found");
+        }
     }
 
 
@@ -215,6 +232,7 @@ public class FPSController : MonoBehaviour
             float vertical = !keyboardControlled ? CrossPlatformInputManager.GetAxis("Vertical Joystick 1") : Input.GetAxis("Vertical");
 
             float horizontalLook = !keyboardControlled ? CrossPlatformInputManager.GetAxis("Horizontal Look") : 0.0f;
+            float verticalLook = !keyboardControlled ? CrossPlatformInputManager.GetAxis("Vertical Look") : 0.0f;
 
             bool waswalking = m_IsWalking;
 
@@ -228,7 +246,8 @@ public class FPSController : MonoBehaviour
             m_Input = new Vector2(horizontal, vertical);
 
             //Controller look
-            l_input = horizontalLook;
+            lookH_input = horizontalLook;
+            lookV_input = verticalLook;
 
             // normalize input if it exceeds 1 in combined length:
             if (m_Input.sqrMagnitude > 1)
@@ -274,7 +293,14 @@ public class FPSController : MonoBehaviour
     {
         //m_MouseLook.LookRotation(transform, m_Camera.transform);
 
-        this.transform.Rotate(Vector3.up, l_input * rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, lookH_input * rotationSpeed * Time.deltaTime);
+        if (camera != null)
+        {
+            camera.Rotate(Vector3.right, lookV_input * rotationSpeed * Time.deltaTime);
+            vLookRotation -= lookV_input * rotationSpeed * Time.deltaTime;
+            vLookRotation = Mathf.Clamp(vLookRotation, -30, 30);
+            camera.rotation = Quaternion.Euler(-vLookRotation, 0, 0);
+        }
     }
 
 
