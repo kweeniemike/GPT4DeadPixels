@@ -27,7 +27,7 @@ public class AIManager : MonoBehaviour
     {
         this.inited = true;
 
-        if (!PhotonNetwork.isMasterClient || (PhotonNetwork.isMasterClient && PhotonNetwork.room.maxPlayers == 2)) this.enabled = false;
+        if (!PhotonNetwork.isMasterClient) this.enabled = false;
     }
 	
 	// Update is called once per frame

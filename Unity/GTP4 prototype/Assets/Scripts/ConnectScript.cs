@@ -71,9 +71,9 @@ public class ConnectScript : MonoBehaviour
 
     private void JoinRoom()
     {
+        Debug.Log("trying to join a room");
         // Try to join a game with the given custom room properties.
-        ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevelId }, { "SubLevelId", this.CurrentSubLevelId } };
-        bool joined = PhotonNetwork.JoinRandomRoom(customProperties, 0);
+        PhotonNetwork.JoinRandomRoom();
     }
 
     private void SpawnPlayer()
@@ -103,11 +103,11 @@ public class ConnectScript : MonoBehaviour
     }
     public void OnPhotonRandomJoinFailed()
     {
-        int maxPlayerAmount = UnityEngine.Random.Range(0, 2) + 1;
+        Debug.Log("Failed to join");
 
         // If the join fails, create a new room with the custom properties
-        ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevelId }, { "SubLevelId", this.CurrentSubLevelId } };
-        PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { maxPlayers = (byte)maxPlayerAmount, isOpen = true, isVisible = true, customRoomProperties = customProperties, customRoomPropertiesForLobby = new string[] { "LevelId", "PlayerType" } }, TypedLobby.Default);
+        //ExitGames.Client.Photon.Hashtable customProperties = new ExitGames.Client.Photon.Hashtable() { { "LevelId", this.CurrentLevelId }, { "SubLevelId", this.CurrentSubLevelId } };
+        PhotonNetwork.CreateRoom("Room" + UnityEngine.Random.Range(0, 9999), new RoomOptions() { maxPlayers = 2, isOpen = true, isVisible = true }, TypedLobby.Default);
     }
 
     public void OnCreatedRoom()

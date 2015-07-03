@@ -12,7 +12,7 @@ public class KeyPuzzle : Interactable
     private PhotonView photonView;
      
     // Use this for initialization
-    void Start()
+    new void Start()
     {
         base.Start();
         this.photonView = base.getPhotonView();
